@@ -1,10 +1,11 @@
 import React from 'react';
 import CastItem from '../CastItem/CastItem';
+import { CastListStyle } from './CastList.styled';
 
 const CastList = ({ cast }) => {
   const set = new Set();
   return (
-    <ul>
+    <CastListStyle>
       {cast &&
         cast.map(({ id, name, profile_path, character }) => {
           if (!set.has(id)) {
@@ -21,7 +22,7 @@ const CastList = ({ cast }) => {
             return null;
           }
         })}
-    </ul>
+    </CastListStyle>
   );
 };
 

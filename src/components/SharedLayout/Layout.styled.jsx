@@ -10,19 +10,18 @@ export const Header = styled.header`
 
     li {
       a {
-        text-decoration: none;
-        color: white;
         font-size: 1.5rem;
         font-weight: 700;
+        text-decoration: none;
+        color: white;
 
-        &:active,
         &:hover {
           color: yellow;
         }
       }
+      .active {
+        color: yellow;
+      }
     }
   }
-  /* display: flex;
-flex-direction: row;
-align-items: center; */
 `;

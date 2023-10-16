@@ -1,4 +1,5 @@
 import React from 'react';
+import { SearchImputStyled } from './SearchMoviersForm.styled';
 
 const SearchMoviesForm = ({ handleQuery, queryParam, setPage }) => {
   const onSearch = e => {
@@ -6,10 +7,9 @@ const SearchMoviesForm = ({ handleQuery, queryParam, setPage }) => {
     const nextParams = query !== '' ? { query } : {};
     console.log(query);
     handleQuery(nextParams);
-    // setPage(1);
   };
   return (
-    <input
+    <SearchImputStyled
       type="text"
       value={queryParam}
       onChange={onSearch}
@@ -19,4 +19,3 @@ const SearchMoviesForm = ({ handleQuery, queryParam, setPage }) => {
 };
 
 export default SearchMoviesForm;
-// const [searchParams, setSearchParams] = useSearchParams();

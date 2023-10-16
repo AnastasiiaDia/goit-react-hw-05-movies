@@ -1,14 +1,6 @@
-// import { Header } from '../components/Header/Header';
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import Home from './pages/Home';
-// import Movie from './pages/Movie';
-// import MovieDetails from './pages/MovieDetails';
-// import Cast from './Cast/Cast';
-// import Reviews from './Reviews/Reviews';
-// import SharedLayout from './SharedLayout/SharedLayout';
-
-// import Loader from './Loader';
+import NoFound from './NoFound/NoFound';
 
 const Home = lazy(() => import('./pages/Home'));
 const Movie = lazy(() => import('./pages/Movie'));
@@ -31,6 +23,7 @@ export function App() {
               <Route path="reviews" element={<Reviews />} />
             </Route>
           </Route>
+          <Route path="*" element={<NoFound />} />
         </Routes>
       </Suspense>
     </>

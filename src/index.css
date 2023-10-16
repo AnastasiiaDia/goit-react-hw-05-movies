@@ -7,6 +7,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(12, 12, 12);
+  color: aliceblue;
 }
 
 code {
@@ -16,4 +18,25 @@ code {
 
 ul {
   list-style: none;
+  padding-inline-start: 0;
+}
+img {
+  display: block;
+  height: auto;
+}
+
+ul,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.titles {
+  text-align: center;
+  color: aliceblue;
 }

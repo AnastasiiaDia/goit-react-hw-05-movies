@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCreditsCastMovie } from 'services/api';
 import CastList from './CastList/CastList';
+import { Container } from 'components/App.styled';
 
 const Cast = () => {
   const [cast, setCast] = useState('');
@@ -25,12 +26,12 @@ const Cast = () => {
     fetchData(movieId);
   }, [movieId]);
   return (
-    <section>
+    <Container>
       <div>
         {loading && <CastList cast={cast} />}
         {error && <h1>Error</h1>}
       </div>
-    </section>
+    </Container>
   );
 };
 
